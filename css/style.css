@@ -78,7 +78,7 @@ nav a:hover {
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
-  position: relative; /*not sure if this is needed */
+  position: relative;
   top: -40px;
 
   /* Requirement 3a code here done */
@@ -89,7 +89,6 @@ nav a:hover {
 
 .skip a:focus{
   top: 0;
-  left: 0;
 }
 
 /* Requirement 4 code here*/
@@ -103,8 +102,14 @@ nav a:hover {
   /* Requirement 5 code here*/
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(5, auto);
   grid-row-gap: 15px;
+  /* grid-template-areas:
+    "header header header"
+    "about-image about about-image"
+    "method-image method method-image"
+    "clients-image clients clients-image"
+    "contact-image contact contact-image"; */
 
 }
 
@@ -116,10 +121,11 @@ header{
   background-size: cover; /* Parallax effect */
   color: white;
   height: 400px; /* Parallax effect */
-  display: grid;
   grid-row: 1 / span 1;
-  grid-column: 1 / 4;
+  grid-column: 1 / 6;
   background-image: url('../images/header.jpg');
+  background-repeat: no-repeat;
+  /* grid-area: header; */
 
   /* YOUR CODE HERE; */
 }
@@ -127,60 +133,62 @@ header{
 
 
 .about-image{
-  display: grid;
-  grid-template-columns: 1 / span 3;
+  grid-column-start: 1;
   max-height: 700px;
   overflow: hidden;
-  grid-template-rows: 2 / span 1;
+  grid-row: 2 / span 1;
+  /* grid-area: about-image;
+} */
 }
 
 .about{
- display: grid;
- grid-template-columns: 2 / span 1; 
- grid-template-rows: 2 / span 1;
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  /* grid-area: about; */
 }
 
 .method-image{
-  display: grid;
-  grid-template-columns: 1 / span 3;
+  grid-column: 1 / span 3;
   max-height: 700px;
   overflow: hidden;
-  grid-template-rows: 3 / span 1;
+  grid-row: 3 / span 1;
+  /* grid-area: method-image; */
 }
 
 .method{
-  display: grid;
-  grid-template-rows: 3 / span 1;
-  grid-template-columns: 2 / span 1;
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+  /* grid-area: method; */
 }
 
 .clients {
-  display: grid;
   grid-template-rows: 4 / span 1;
   grid-template-rows: 2 / span 1;
+  /* grid-area: clients; */
 }
 
 .clients-image {
-  display: grid;
   grid-template-columns: 1 / span 3;
   max-height: 700px;
   overflow: hidden;
   grid-template-rows: 4 / span 1;
+  /* grid-area: clients-image; */
 }
 
 .contact{
-  display: grid;
   grid-template-rows: 2 / span 1;
   grid-template-columns: 5 / span 1;
+  overflow: hidden;
+  /* grid-area: contact; */
 }
 /* You need to write some of your own selectors here */
 ß
 .contact-image {
-  display: grid;
   grid-column: 1 / span 3;
   max-height: 700px;
   overflow: hidden;
   grid-row: 2 / span 1;
+  /* grid-area: contact-image; */
 }
 
 
