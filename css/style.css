@@ -162,22 +162,22 @@ header{
 }
 
 .clients {
-  grid-template-rows: 4 / span 1;
-  grid-template-rows: 2 / span 1;
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 1;
   /* grid-area: clients; */
 }
 
 .clients-image {
-  grid-template-columns: 1 / span 3;
+  grid-column: 1 / span 3;
   max-height: 700px;
   overflow: hidden;
-  grid-template-rows: 4 / span 1;
+  grid-row: 4 / span 1;
   /* grid-area: clients-image; */
 }
 
 .contact{
-  grid-template-rows: 2 / span 1;
-  grid-template-columns: 5 / span 1;
+  grid-column: 2 / span 1;
+  grid-row: 5 / span 1;
   overflow: hidden;
   /* grid-area: contact; */
 }
