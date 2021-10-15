@@ -103,7 +103,7 @@ nav a:hover {
   /* Requirement 5 code here*/
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: repeat(5,auto);
+  grid-template-rows: repeat(5 , auto);
   grid-row-gap: 15px;
   /* grid-template-areas:
     "header header header"
@@ -117,15 +117,16 @@ nav a:hover {
 /* Remainder of requirements here: */
 
 header{
+  background-image: url('../images/header.jpg');
   background-attachment: fixed; /* Parallax effect */
   background-position: center; /* Parallax effect */
   background-size: cover; /* Parallax effect */
   color: white;
   height: 400px; /* Parallax effect */
+
+  background-repeat: no-repeat;
   grid-row: 1;
   grid-column: 1 / -1;
-  background-image: url('../images/header.jpg');
-  background-repeat: no-repeat;
   /* grid-area: header; */
 
   /* YOUR CODE HERE; */
