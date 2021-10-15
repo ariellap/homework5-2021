@@ -78,7 +78,7 @@ nav a:hover {
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
-  position: relative;
+  position: absolute; /*this should make it's position relative to it's parent */
   top: -40px;
 
   /* Requirement 3a code here done */
@@ -102,7 +102,7 @@ nav a:hover {
   /* Requirement 5 code here*/
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: repeat(5, auto);
+  grid-template-rows: repeat(5,auto);
   grid-row-gap: 15px;
   /* grid-template-areas:
     "header header header"
@@ -121,8 +121,8 @@ header{
   background-size: cover; /* Parallax effect */
   color: white;
   height: 400px; /* Parallax effect */
-  grid-row: 1 / span 1;
-  grid-column: 1 / 6;
+  grid-row: 1;
+  grid-column: 1 / -1;
   background-image: url('../images/header.jpg');
   background-repeat: no-repeat;
   /* grid-area: header; */
@@ -178,7 +178,6 @@ header{
 .contact{
   grid-column: 2 / span 1;
   grid-row: 5 / span 1;
-  overflow: hidden;
   /* grid-area: contact; */
 }
 /* You need to write some of your own selectors here */
@@ -196,8 +195,8 @@ header{
   background-color: rgba(255, 255, 255, .8);
   border: 10px solid black;
   padding: 30px;
-  align-content: center;
-
+  /* align-self: center; */
+  align-content:center;
   /* Your code here */
 
 }
@@ -276,3 +275,4 @@ header{
     background-attachment: initial;
   }
 }
+
